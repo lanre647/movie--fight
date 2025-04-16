@@ -1,48 +1,44 @@
-.tutorial {
-  width: 600px;
+/* Hide by default */
+.mobile-notice {
+  display: none;
   text-align: center;
-  margin: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  background-color: #fff3cd;
+  color: #856404;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-figure.image {
-  display: flex;
-  justify-content: center;
-  background-color: black;
+/* Show only on small screens */
+@media (max-width: 768px) {
+  .mobile-notice {
+    display: block;
+  }
 }
 
-figure .image img {
-  width: 128px;
+/* Typewriter effect */
+.typewriter-text {
+  overflow: hidden;
+  border-right: 2px solid #856404;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  animation: typing 3s steps(40, end), blink 0.8s step-end infinite;
+  max-width: 100%;
+  width: fit-content;
 }
 
-.notification {
-  margin-top: 20px !important;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-.title .icon {
-  margin-left: 15px;
-}
-
-.hero {
-  margin-bottom: 20px;
-}
-
-.forms {
-  display: flex;
-  justify-content: space-around;
-}
-
-.results {
-  max-height: 500px;
-  overflow-y: scroll;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  height: 60px;
-}
-
-.dropdown-item img {
-  height: 50px;
-  margin-right: 10px;
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
